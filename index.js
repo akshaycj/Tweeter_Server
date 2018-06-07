@@ -6,6 +6,8 @@ const app = express();
 
 var data;
 
+var port = process.env.PORT || 8080
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var client = new Twit({
@@ -70,6 +72,6 @@ app.get("/now", function (req, re) {
     
 });
 
-app.listen(8080, function () {
+app.listen(port, function () {
     console.log("Server started listening...");
 });
