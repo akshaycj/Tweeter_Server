@@ -24,9 +24,7 @@ client.get("search/tweets", params, function (
   if (!error) {
     var res = tweets.statuses;
 
-    app.get('/', function(req, re) {
-        re.send('Hello World'+tweets)
-      })
+    
     
     for (var i = 0; i < res.length; i++) {
       console.log("text", res[i].text)
@@ -35,5 +33,9 @@ client.get("search/tweets", params, function (
   console.log("error", error);
 
 });
+
+app.get('/', function(req, re) {
+    re.send('Hello World')
+  })
 
 
