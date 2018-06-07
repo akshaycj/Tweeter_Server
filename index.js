@@ -59,6 +59,14 @@ app.get("/user", function (req, re) {
 });
 
 
+app.get("/", function (req, re) {
+
+   re.send("You're in the wrong side of the plate, mate!")
+
+    
+});
+
+
 app.get("/now", function (req, re) {
 
     var params = { count: 5 };
