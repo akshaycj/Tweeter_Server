@@ -32,8 +32,13 @@ app.get("/s", function (req, re) {
     client.get("search/tweets", params, function (error, tweets, response) {
         if (!error) {
             var res = tweets.statuses;
+            var ids = []
 
-            re.status(200).json(res)
+            for(let i=0;i<res.length; i++){
+                ids.push(res[i].id_str)
+            }
+
+            re.status(200).json(ids)
 
         }
         console.log("error", error);
