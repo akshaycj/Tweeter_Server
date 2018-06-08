@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 
 app.get("/s", function (req, re) {
 
-    var params = { q: req.query.search, count: 5 };
+    var params = { q: req.query.search,};
     client.get("search/tweets", params, function (error, tweets, response) {
         if (!error) {
             var res = tweets.statuses;
