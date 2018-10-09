@@ -98,7 +98,7 @@ app.get("/all", function(req, re) {
         "Fk-Affiliate-Id": "akshaycj9",
         "Fk-Affiliate-Token": "bc9bda6792c8476e8617609de3d86afd"
       },
-      uri: dod,
+      uri: allOffers,
 
       method: "GET"
     },
